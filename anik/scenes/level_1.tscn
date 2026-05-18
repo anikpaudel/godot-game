@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://hifum8d0dj8r"]
+
+[ext_resource type="PackedScene" uid="uid://c2vo2sd0qksm1" path="res://perfabs/player.tscn" id="1_5xbjy"]
+[ext_resource type="Texture2D" uid="uid://dvfa7d1bhuqlr" path="res://icon.svg" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://c7c1ghxl6ve3" path="res://perfabs/spike.tscn" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://byd8tfotd6sp4" path="res://perfabs/portal.tscn" id="4_4nkto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
+size = Vector2(248, 32)
+
+[node name="level1" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_5xbjy")]
+position = Vector2(96, 408)
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(160, 536)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+position = Vector2(0, -7.62939e-06)
+scale = Vector2(1.9375, 0.25)
+texture = ExtResource("1_014kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_rus8k")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(1072, 480)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3"]
+position = Vector2(0, -7.62939e-06)
+scale = Vector2(1.9375, 0.25)
+texture = ExtResource("1_014kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("RectangleShape2D_rus8k")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(1408, 552)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform4"]
+position = Vector2(0, -7.62939e-06)
+scale = Vector2(1.9375, 0.25)
+texture = ExtResource("1_014kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("RectangleShape2D_rus8k")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(456, 544)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform2"]
+position = Vector2(0, -7.62939e-06)
+scale = Vector2(1.9375, 0.25)
+texture = ExtResource("1_014kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("RectangleShape2D_rus8k")
+
+[node name="spike" parent="." instance=ExtResource("3_5xbjy")]
+position = Vector2(312, 496)
+
+[node name="portal" parent="." instance=ExtResource("4_4nkto")]
+position = Vector2(720, 352)
+
+[node name="spike2" parent="." instance=ExtResource("3_5xbjy")]
+position = Vector2(1072, 432)
